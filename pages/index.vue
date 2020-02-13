@@ -1,6 +1,11 @@
 <template>
   <v-row>
-    <img v-for="p in images" :key="p" :src="`/card-images/${p}`" width="96" />
+    <img
+      v-for="p in images"
+      :key="p"
+      :src="`${staticBase}card-images/${p}`"
+      width="96"
+    />
   </v-row>
 </template>
 
@@ -9,6 +14,10 @@ import { Vue, Component } from 'nuxt-property-decorator'
 
 @Component
 export default class extends Vue {
+  get staticBase() {
+    return process.env.STATIC_BASE
+  }
+
   images = [
     'EoP_Card Game Images-01.png',
     'EoP_Card Game Images-02.png',

@@ -1,5 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 
+//console.log(`NODE_ENV:`, process.env.NODE_ENV)
+const isProduction = () => process.env.NODE_ENV === "production";
+
 export default {
   mode: 'spa',
   /*
@@ -87,7 +90,12 @@ export default {
      */
     extend(config, ctx) {}
   },
+
+  // gh-pages
   router: {
-    base: '/eop-game/'
+    base: isProduction() ? '/eop-game/' : undefined,
+  },
+  env: {
+    STATIC_BASE: isProduction() ? '' : '/',
   }
 }
