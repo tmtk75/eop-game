@@ -76,17 +76,17 @@ export default {
           icon: 'mdi-apps',
           title: 'Welcome',
           to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
         }
+        // {
+        //   icon: 'mdi-chart-bubble',
+        //   title: 'Inspire',
+        //   to: '/inspire'
+        // }
       ],
       miniVariant: false,
       right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+      rightDrawer: false
+      // title: 'Vuetify.js'
     }
   }
 }
