@@ -45,6 +45,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxt/typescript-build',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
@@ -63,7 +64,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
